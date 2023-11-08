@@ -29,10 +29,10 @@ setup.
 
 Current list of convention plugins:
 
-- [`swift_lift.android.application`](convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt),
-  [`swift_lift.android.library`](convention/src/main/kotlin/AndroidLibraryConventionPlugin.kt),
-  [`swift_lift.android.test`](convention/src/main/kotlin/AndroidTestConventionPlugin.kt):
+- [`veflix.android.application`](convention/src/main/kotlin/AndroidApplicationConventionPlugin.kt),
+  [`veflix.android.library`](convention/src/main/kotlin/AndroidLibraryConventionPlugin.kt),
+  [`veflix.android.test`](convention/src/main/kotlin/AndroidTestConventionPlugin.kt):
   Configures common Android and Kotlin options.
-- [`swift_lift.android.application.compose`](convention/src/main/kotlin/AndroidApplicationComposeConventionPlugin.kt),
-  [`swift_lift.android.library.compose`](convention/src/main/kotlin/AndroidLibraryComposeConventionPlugin.kt):
+- [`veflix.android.application.compose`](convention/src/main/kotlin/AndroidApplicationComposeConventionPlugin.kt),
+  [`veflix.android.library.compose`](convention/src/main/kotlin/AndroidLibraryComposeConventionPlugin.kt):
   Configures Jetpack Compose options
