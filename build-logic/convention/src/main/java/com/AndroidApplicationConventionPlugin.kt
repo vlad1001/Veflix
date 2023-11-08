@@ -1,5 +1,5 @@
-import com.android.build.api.variant.ApplicationAndroidComponentsExtension
 import com.android.build.api.dsl.ApplicationExtension
+import com.android.build.api.variant.ApplicationAndroidComponentsExtension
 import com.veflix.AndroidConfig
 import com.veflix.configureFlavors
 import com.veflix.configureKotlinAndroid
