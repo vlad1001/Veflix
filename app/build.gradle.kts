@@ -39,7 +39,7 @@ android {
         targetCompatibility = com.veflix.AndroidConfig.sourceCompatibility
     }
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
+        jvmTarget = JavaVersion.VERSION_11.toString()
     }
     buildFeatures {
         compose = true
@@ -50,7 +50,10 @@ android {
 }
 
 dependencies {
-//    implementation ("com.google.android.material:material:1.9.0")
+    implementation(project(":model"))
+    implementation(project(":core"))
+    implementation(project(":lobby-ui"))
+    implementation(project(":designsystem"))
 
     implementation(libs.accompanist.systemuicontroller)
     implementation(libs.androidx.activity.compose)

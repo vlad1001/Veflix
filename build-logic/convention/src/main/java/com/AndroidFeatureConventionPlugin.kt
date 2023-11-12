@@ -11,8 +11,8 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             pluginManager.apply {
-                apply("swift_lift.android.library")
-                apply("swift_lift.android.hilt")
+                apply("veflix.android.library")
+                apply("veflix.android.hilt")
             }
             extensions.configure<LibraryExtension> {
                 defaultConfig {
