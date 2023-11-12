@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.veflix.core.extentions.launchAndRepeatWithViewLifecycle
-import com.example.veflix.lobby.navigation.navigateToLobby
+import com.example.veflix.navigation.LOBBY_GRAPH_ROUTE
 import com.example.veflix.navigation.MainNavigation
 import com.example.veflix.ui.theme.VeflixTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -22,9 +22,13 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
+    companion object {
+        const val SPLASH_TIMEOUT = 1500L
+    }
+
     private val viewModel: MainViewModel by viewModels()
 
-//    private lateinit var navController: NavHostController
+    private var navController: NavHostController? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,24 +42,24 @@ class MainActivity : AppCompatActivity() {
 
                     val navController = rememberNavController()
                     MainNavigation(navController = navController)
-                    navController.navigateToLobby()
+                    //navController.navigateToLobby()
                 }
             }
         }
     }
 
-//    override fun onCreateView(name: String, context: Context, attrs: AttributeSet): View? {
-//        launchAndRepeatWithViewLifecycle {
-//            viewModel.navigationActions.collect{
-//                when(it){
-//                    NavigationActions.NavigateToLobby -> {
-//                        navController.navigateToLobby()
-//                    }
-//                }
-//            }
-//        }
-//
-//        return super.onCreateView(name, context, attrs)
-//
-//    }
+    override fun onCreateView(name: String, context: Context, attrs: AttributeSet): View? {
+        launchAndRepeatWithViewLifecycle {
+            viewModel.navigationActions.collect{
+                when(it){
+                    NavigationActions.NavigateToLobby -> {
+                        navController?.navigate(route = LOBBY_GRAPH_ROUTE)
+                    }
+                }
+            }
+        }
+
+        return super.onCreateView(name, context, attrs)
+
+    }
 }

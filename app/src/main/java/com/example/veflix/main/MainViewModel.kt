@@ -2,8 +2,8 @@ package com.example.veflix.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.veflix.core.util.AppCoroutineDispatchers
 import com.example.veflix.core.logger.Logger
+import com.example.veflix.core.util.AppCoroutineDispatchers
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
