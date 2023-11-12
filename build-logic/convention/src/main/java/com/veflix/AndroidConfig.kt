@@ -15,8 +15,8 @@ object AndroidConfig {
     const val applicationId = "com.veflix"
     const val testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-    val sourceCompatibility = JavaVersion.VERSION_17
-    val targetCompatibility = JavaVersion.VERSION_17
+    val sourceCompatibility = JavaVersion.VERSION_11
+    val targetCompatibility = JavaVersion.VERSION_11
 
     private val versionProperties by lazy {
         Properties().apply { load(FileInputStream(File("version.properties"))) }

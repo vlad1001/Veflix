@@ -20,3 +20,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "Veflix"
 include(":app")
+include(":core")
+include(":core-ui")
+include(":lobby-ui")
+include(":designsystem")
+include(":model")

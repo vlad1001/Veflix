@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Verflix" parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
 
-    <style name="Theme.Veflix" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.Veflix" parent="Base.Theme.Verflix">
+        <item name="android:windowDisablePreview">true</item>
+    </style>
 </resources>
